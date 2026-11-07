@@ -1,0 +1,42 @@
+{
+ "schema": 1,
+ "note": "Arabic tafsir books packed by Quran Companion (tool/tafsir_books in the app repository). Each zip holds one SQLite file in QuranEnc layout: translations(id, sura, aya, translation, footnotes); a verse explained with its group holds the global number of the group's first verse. The text comes from the official Quranpedia.net data dumps, credited with their version as their licence asks.",
+ "books": [
+  {
+   "id": "qcb:ar_kashshaf",
+   "title_en": "Al-Kashshaf (Tafsir al-Zamakhshari)",
+   "title_ar": "الكشاف (تفسير الزمخشري)",
+   "author_en": "Al-Zamakhshari (d. 538 AH)",
+   "author_ar": "الزمخشري (ت 538 هـ)",
+   "release": "tafsir-books-qc",
+   "file": "ar_kashshaf_qc.zip",
+   "url": "https://github.com/AbedKarmi/quran-companion-models/releases/download/tafsir-books-qc/ar_kashshaf_qc.zip",
+   "size": 3552948,
+   "sha256": "77ffd7e733dd6997404eed9a6047bbdbcd5c5d9c55b424896c105fb23ce365a5",
+   "version": "2026-11-05",
+   "edition_en": "Dar al-Kitab al-'Arabi, Beirut, 3rd edition, 1407 AH, with Ibn al-Munayyir's al-Intisaf and the notes on its hadiths",
+   "edition_ar": "دار الكتاب العربي، بيروت، الطبعة الثالثة، 1407 هـ، مع حاشية الانتصاف لابن المنيّر وتخريج أحاديثه",
+   "source": "Quranpedia.net data dumps (https://quranpedia.net), version 2026-11-05",
+   "about_en": "Its author held Mu'tazili views in creed; the book is valued mainly for its language and rhetoric.",
+   "about_ar": "كان مؤلفه على مذهب المعتزلة في العقيدة، ويُعتمد الكتاب أساسًا لعنايته باللغة والبلاغة.",
+   "machine_translation": false
+  },
+  {
+   "id": "qcb:ar_razi",
+   "title_en": "Mafatih al-Ghayb (al-Tafsir al-Kabir)",
+   "title_ar": "مفاتيح الغيب (التفسير الكبير)",
+   "author_en": "Fakhr al-Din al-Razi (d. 606 AH)",
+   "author_ar": "فخر الدين الرازي (ت 606 هـ)",
+   "release": "tafsir-books-qc",
+   "file": "ar_razi_qc.zip",
+   "url": "https://github.com/AbedKarmi/quran-companion-models/releases/download/tafsir-books-qc/ar_razi_qc.zip",
+   "size": 10049768,
+   "sha256": "6986bb62e285e6f8a377258470661e6bc148900e70f9b2ea5c1842384f56fb61",
+   "version": "2026-11-05",
+   "edition_en": "Dar Ihya' al-Turath al-'Arabi, Beirut, 3rd edition, 1420 AH",
+   "edition_ar": "دار إحياء التراث العربي، بيروت، الطبعة الثالثة، 1420 هـ",
+   "source": "Quranpedia.net data dumps (https://quranpedia.net), version 2026-11-05",
+   "machine_translation": false
+  }
+ ]
+}
