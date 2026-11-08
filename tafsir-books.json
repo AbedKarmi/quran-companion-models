@@ -19,7 +19,7 @@
    "source": "Quranpedia.net data dumps (https://quranpedia.net), version 2026-11-05",
    "about_en": "Its author held Mu'tazili views in creed; the book is valued mainly for its language and rhetoric.",
    "about_ar": "كان مؤلفه على مذهب المعتزلة في العقيدة، ويُعتمد الكتاب أساسًا لعنايته باللغة والبلاغة.",
-   "machine_translation": false
+   "machine_translation": true
   },
   {
    "id": "qcb:ar_razi",
@@ -36,7 +36,7 @@
    "edition_en": "Dar Ihya' al-Turath al-'Arabi, Beirut, 3rd edition, 1420 AH",
    "edition_ar": "دار إحياء التراث العربي، بيروت، الطبعة الثالثة، 1420 هـ",
    "source": "Quranpedia.net data dumps (https://quranpedia.net), version 2026-11-05",
-   "machine_translation": false
+   "machine_translation": true
   }
  ]
 }
