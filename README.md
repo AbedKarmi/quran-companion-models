@@ -22,5 +22,6 @@ Downloaded on demand by Quran Companion (the tafsir library). Listed with their 
 |---|---|---|
 | `ar_kashshaf_qc.zip` | Al-Kashshaf (Tafsir al-Zamakhshari), Al-Zamakhshari (d. 538 AH); edition: Dar al-Kitab al-'Arabi, Beirut, 3rd edition, 1407 AH, with Ibn al-Munayyir's al-Intisaf and the notes on its hadiths | [Quranpedia.net](https://quranpedia.net) data dumps, version 2026-11-05 |
 | `ar_razi_qc.zip` | Mafatih al-Ghayb (al-Tafsir al-Kabir), Fakhr al-Din al-Razi (d. 606 AH); edition: Dar Ihya' al-Turath al-'Arabi, Beirut, 3rd edition, 1420 AH | [Quranpedia.net](https://quranpedia.net) data dumps, version 2026-11-05 |
+| `ar_raghib_qc.zip` | Tafsir al-Raghib al-Isfahani, al-Raghib al-Isfahani (d. 502 AH), al-Fatiha to the end of al-Ma'ida (all that survives); edition: Kulliyyat al-Da'wa wa Usul al-Din, Umm al-Qura University, 1422 AH | [Quranpedia.net](https://quranpedia.net) data dumps, version 2026-08-10 |
 
 Republished as a downloadable database under the Quranpedia.net data licence, which asks for credit to Quranpedia.net with a link and the dump version. Built by `tool/tafsir_books/books.py` in the app repository; a rebuild from a newer dump gets a new version and is uploaded with `--clobber`.

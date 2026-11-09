@@ -37,6 +37,25 @@
    "edition_ar": "دار إحياء التراث العربي، بيروت، الطبعة الثالثة، 1420 هـ",
    "source": "Quranpedia.net data dumps (https://quranpedia.net), version 2026-11-05",
    "machine_translation": true
+  },
+  {
+   "id": "qcb:ar_raghib",
+   "title_en": "Tafsir al-Raghib al-Isfahani",
+   "title_ar": "تفسير الراغب الأصفهاني",
+   "author_en": "Al-Raghib al-Isfahani (d. 502 AH)",
+   "author_ar": "الراغب الأصفهاني (ت 502 هـ)",
+   "release": "tafsir-books-qc",
+   "file": "ar_raghib_qc.zip",
+   "url": "https://github.com/AbedKarmi/quran-companion-models/releases/download/tafsir-books-qc/ar_raghib_qc.zip",
+   "size": 765104,
+   "sha256": "3e5291c998f429730637bc3a31da5a23492a8923bfdb1d3ce280a7c3d6463fe8",
+   "version": "2026-08-10",
+   "edition_en": "Kulliyyat al-Da'wa wa Usul al-Din, Umm al-Qura University, 1422 AH (theses; edited by Hind bint Muhammad Sardar and others)",
+   "edition_ar": "كلية الدعوة وأصول الدين، جامعة أم القرى، 1422 هـ (رسائل علمية؛ تحقيق هند بنت محمد سردار وآخرين)",
+   "source": "Quranpedia.net data dumps (https://quranpedia.net), version 2026-08-10",
+   "about_en": "What survives of the book: al-Fatiha to the end of al-Ma'ida (1:1-5:120); the other ayat have no text in it.",
+   "about_ar": "الموجود من الكتاب: من الفاتحة إلى آخر سورة المائدة (1:1-5:120)، ولا نص فيه لغيرها من الآيات.",
+   "machine_translation": true
   }
  ]
 }
