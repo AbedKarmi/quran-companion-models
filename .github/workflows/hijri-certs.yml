@@ -1,0 +1,44 @@
+# Keeps prayer-data.json's `hijri_certs` current: the certificates Quran Companion's Hijri date
+# sync adds for official sources that send an incomplete chain (or whose root older phones lack).
+# Daily: checks every source, verifies each chain against Mozilla's roots (certifi), and commits
+# prayer-data.json only when the verified set changed. Phones fetch the file once a day.
+# The script is a copy of Quran Companion's tool/hijri_sync/check_certs.py (keep them alike).
+name: hijri-certs
+
+on:
+  schedule:
+    - cron: '17 3 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - run: pip install 'cryptography>=43' certifi
+      - name: Check the sources' certificate chains
+        id: check
+        run: |
+          set +e
+          python scripts/check_hijri_certs.py --prayer-data prayer-data.json
+          code=$?
+          echo "code=$code" >> "$GITHUB_OUTPUT"
+          # 10: changed (commit); 0: unchanged; 1: a source could not be verified (kept as it was).
+          if [ "$code" != 0 ] && [ "$code" != 10 ] && [ "$code" != 1 ]; then exit "$code"; fi
+      - name: Commit prayer-data.json when the certificates changed
+        if: steps.check.outputs.code == '10'
+        run: |
+          git config user.name 'hijri-certs bot'
+          git config user.email 'actions@users.noreply.github.com'
+          git add prayer-data.json
+          git commit -m 'prayer-data.json: Hijri sync certificates updated (scripts/check_hijri_certs.py)'
+          git push
+      - name: Warn when a source could not be verified
+        if: steps.check.outputs.code == '1'
+        run: echo "::warning::A Hijri sync source's certificate chain could not be verified; its certificates were kept as they were."
