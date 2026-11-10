@@ -146,7 +146,7 @@ def main():
             print(f'ok  {host}: {names}')
             keep.extend(chain)
         except Exception as e:
-            print(f'ERR {e}', file=sys.stderr)
+            print(f'ERR {host}: {e}', file=sys.stderr)
             failed.append(host)
     if failed and old:
         # A host that could not be checked now keeps the certificates it had.
