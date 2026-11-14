@@ -1,0 +1,26 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash|Edit|MultiEdit|NotebookEdit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"c:\\Users\\karmi\\.vscode\\extensions\\fedefluork.claude-keep-undo-1.3.0\\hooks\\keepundo-hook.mjs\" pre --state \"c:\\Users\\karmi\\AppData\\Roaming\\Code\\User\\globalStorage\\fedefluork.claude-keep-undo\\folders\\a83f16e6715844ed\" --root \"b:\\Flutter\\quran-companion-models\" --bash created"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Bash|Edit|MultiEdit|NotebookEdit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"c:\\Users\\karmi\\.vscode\\extensions\\fedefluork.claude-keep-undo-1.3.0\\hooks\\keepundo-hook.mjs\" post --state \"c:\\Users\\karmi\\AppData\\Roaming\\Code\\User\\globalStorage\\fedefluork.claude-keep-undo\\folders\\a83f16e6715844ed\" --root \"b:\\Flutter\\quran-companion-models\" --bash created"
+          }
+        ]
+      }
+    ]
+  }
+}
