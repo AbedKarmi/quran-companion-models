@@ -65,5 +65,6 @@ first time the book is opened and checks its SHA-256
 0.7–0.9 MB each): the translated feature texts, user guide and feature list of that app version.
 Since 1.4.11 they are not inside the app; it downloads the file of the language in use from the
 release of its own version. Built and published at each release by `tool/l10n/build_lang_files.py`
-in the app repository, after the translation pass. Machine translations, not reviewed by native
+in the app repository, after the translation pass. The same files also go to `lang-latest`,
+which the app uses only when the release of its own version is not published. Machine translations, not reviewed by native
 speakers unless a language says so.
