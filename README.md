@@ -49,3 +49,21 @@ pairs, labelled in both directions, of the 12 Arabic tafsirs the app offers (and
 Final test on 1,174 directed pairs of unseen verses, in the app's runtime: 95.8 % of its folds
 right, 72 % of the repeats found (the meaning judge on the same test: 41 %). Model card: the
 release's `README.md`; training tools in `tool/tafsir_judge/` of the app repository.
+
+## Lisan al-Arab (release `lisan-v5`)
+
+`lisan.v5.db.gz` (12.3 MB): Ibn Manzur's *Lisan al-Arab* as the gzipped SQLite database read by
+Quran Companion (build 5 of `tool/dictionaries/build.py` in the app repository; text from OpenITI,
+`0711IbnManzurIfriqi.LisanCarab.Shamela0001687-ara1`, Dar Sadir, Beirut, 3rd ed. 1414 AH). Since
+1.4.11 it is no longer inside the app (Google Play's download limit): the app downloads it the
+first time the book is opened and checks its SHA-256
+(`c6148cdd6f32ac6a42955a8751fc2e0e4ce1db5f6aaf61db080189d6f568771f`).
+
+## Language files (releases `lang-<app version>`)
+
+`index.json` and one `<code>.json.gz` per bundled language other than English and Arabic (about
+0.7–0.9 MB each): the translated feature texts, user guide and feature list of that app version.
+Since 1.4.11 they are not inside the app; it downloads the file of the language in use from the
+release of its own version. Built and published at each release by `tool/l10n/build_lang_files.py`
+in the app repository, after the translation pass. Machine translations, not reviewed by native
+speakers unless a language says so.
