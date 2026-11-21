@@ -37,3 +37,15 @@ al-Baghawi) over 400 verses, labelled in both directions. Final test on 58 unsee
 its folds right, 47 % of the repeats found (the earlier rule: 51 % right). Report:
 `tafsir-judge-v1.report.json`. Also bundled in the app (`assets/tafsir_judge/`); training tools in
 `tool/tafsir_judge/` of the app repository.
+
+## Combined tafsir reader (release `tafsir-reader-v1`)
+
+`tafsir-reader.int8.onnx` (110 MB), `tafsir-reader-vocab.txt`, `LICENSE` (Apache-2.0): an optional
+download for Quran Companion's **Combined tafsir**. It reads two sentences of two tafsirs together
+(a cross-encoder fine-tuned from the Ask reader v3, CAMeLBERT-CA) and scores whether the first is
+already said by the second; the app shows the judge's result at once and the reader's when it has
+finished. It writes nothing; every sentence shown is the book's own. Trained on 4,528 sentence
+pairs, labelled in both directions, of the 12 Arabic tafsirs the app offers (and al-Jalalayn).
+Final test on 1,174 directed pairs of unseen verses, in the app's runtime: 95.8 % of its folds
+right, 72 % of the repeats found (the meaning judge on the same test: 41 %). Model card: the
+release's `README.md`; training tools in `tool/tafsir_judge/` of the app repository.
