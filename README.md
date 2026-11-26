@@ -50,6 +50,21 @@ Final test on 1,174 directed pairs of unseen verses, in the app's runtime: 95.8 
 right, 72 % of the repeats found (the meaning judge on the same test: 41 %). Model card: the
 release's `README.md`; training tools in `tool/tafsir_judge/` of the app repository.
 
+## Tajweed practice (release `tajweed-practice-v1`)
+
+`model-int8.onnx` (23.3 MB), `refs_hafs.json.gz` (2.2 MB), `config.json`, `SHA256SUMS`: an optional
+download for Quran Companion's **Tajweed practice** (1.5.0). The learner recites an ayah; the model
+writes the tajweed phonetic script of what was said (madd lengths, ghunnah, qalqalah, ikhfa', iqlab,
+idgham), and the app's rule engine compares it with the precomputed expected script of every ayah
+(`refs_hafs.json.gz`, Hafs) to give per-word **practice feedback**: not a teacher's judgement, a
+grade or an ijaza. Runs offline on the phone. A 20.6 M-parameter CTC model fine-tuned from
+HisnLabs/tajweed-v2 (Apache-2.0) on the Muaalem annotated recitations (MIT, labelled by the Muaalem
+teacher model, MIT), 32 EveryAyah reciters (training only) and MIT learner clips. Gates passed at the
+engine thresholds 0.8 / 0.95: words wrongly flagged on six held-out master reciters 0.9–1.8 %; on
+qdat_bench (expert-labelled learners) phoneme error rate 7.9 %, usual lengths 90.1 %, learner
+deviations heard within ±1 count 84.7 %. Model card and licences: the release's `README.md`;
+evaluation `doc/tajweed/EVAL.md` and tools `tool/tajweed_model/` in the app repository.
+
 ## Lisan al-Arab (release `lisan-v5`)
 
 `lisan.v5.db.gz` (12.3 MB): Ibn Manzur's *Lisan al-Arab* as the gzipped SQLite database read by
